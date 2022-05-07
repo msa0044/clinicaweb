@@ -24,12 +24,12 @@ public class ConsultaController {
     @Autowired
     private ConsultaService service;
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/get/{id}")
     public ResponseEntity<Consulta> getOne(@PathVariable Long id) {
         return ResponseEntity.ok().body(service.getOne(id));
     }
 
-    @GetMapping(value = "/all")
+    @GetMapping(value = "/get")
     public ResponseEntity<List<Consulta>> getAll() {
         return ResponseEntity.ok().body(service.getAll());
     }
@@ -42,7 +42,7 @@ public class ConsultaController {
             return ResponseEntity.created(uri).build();
     }
 
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         service.delete(id);
         return ResponseEntity.noContent().build();
