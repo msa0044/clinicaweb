@@ -1,6 +1,7 @@
 package com.clinica.clinica.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.clinica.clinica.Repositories.MedicoRepository;
 import com.clinica.clinica.entities.Medico;
@@ -15,7 +16,8 @@ public class MedicoService {
     private MedicoRepository repository;
 
     public Medico getOne(Long id){
-        return repository.getById(id);
+        Optional<Medico> p = repository.findById(id);
+        return p.get();
     }
 
     public List<Medico> getAll(){

@@ -1,6 +1,7 @@
 package com.clinica.clinica.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.clinica.clinica.Repositories.ConsultaRepository;
 import com.clinica.clinica.entities.Consulta;
@@ -15,7 +16,8 @@ public class ConsultaService {
     private ConsultaRepository repository;
 
     public Consulta getOne(Long id){
-        return repository.getById(id);
+        Optional<Consulta> p = repository.findById(id);
+        return p.get();
     }
 
     public List<Consulta> getAll(){
