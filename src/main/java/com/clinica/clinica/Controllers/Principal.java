@@ -1,13 +1,13 @@
 package com.clinica.clinica.Controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-@RequestMapping(value = "/")
 public class Principal {
-    @RequestMapping(value = "/")
-    public String index(){
-        return "Index";
-    }
+
+    @GetMapping(value = "/")	
+	public String index() {
+		return "index";
+	}
 }
