@@ -24,6 +24,8 @@ body{
     user-select: none;
 }
 
+
+
 .itemmenu:hover{
     color: rgb(94, 94, 94);
 }
@@ -89,4 +91,20 @@ body{
 
 #submit:hover{
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.300);
+}
+
+.submenu {
+    display: none;
+    position:absolute;
+    background-color: #fff;
+    padding: 15px;
+    top: 40px;
+}
+
+.submenu.open {
+    display: block
+}
+
+.submenu ul {
+    padding: 10px;
 }

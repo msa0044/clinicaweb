@@ -13,13 +13,20 @@
 <body>
     <div id="header">
         <div id="menu">
-            <div id="menuPaciente" onmouseover="entrarSombra('menuPaciente')" onmouseleave="sairSombra('menuPaciente')" class="itemmenu" class="sombra">
+            <div id="menuPaciente" onclick="mostrarMenuPaciente('menuPaciente')" class="itemmenu" class="sombra">
                 PACIENTE
+
+                <div class="submenu">
+                    <ul>
+                        <li>item 1</li>
+                        <li>item 2</li>
+                    </ul>
+                </div>
             </div>
-            <div class="itemmenu">
+            <div id="menuMedico" onclick="mostrarMenuMedico('menuMedico')"  class="itemmenu">
                 MÉDICO
             </div>
-            <div class="itemmenu">
+            <div id="menuConsulta" onclick="mostrarMenuConsulta('menuConsulta')"  class="itemmenu">
                 CONSULTA
             </div>
         </div>
