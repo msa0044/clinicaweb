@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica</title>
+    <script src="formMedico.js"></script>
+    <link rel="stylesheet" href="formMedico.css">
+</head>
+
+<body>
+    <div id="header">
+        <div id="menu">
+            <div id="menuPaciente" onmouseover="entrarSombra('menuPaciente')" onmouseleave="sairSombra('menuPaciente')" class="itemmenu" class="sombra">
+                PACIENTE
+            </div>
+            <div class="itemmenu">
+                MÉDICO
+            </div>
+            <div class="itemmenu">
+                CONSULTA
+            </div>
+        </div>
+    </div>
+    <div id="conteudo">
+        <div id="center">
+            <div id="meio">
+                <h2 id="titulo">CADASTRAR MÉDICO</h2>
+                <form id="form" onsubmit="post()">
+                    <label for="" class="labels">Nome: </label>
+                    <br>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label for="" class="labels">Telefone: </label>
+                    <br>
+                    <input type="tel" class="inputs">
+                    <br>
+                    <label for="" class="labels">CPF: </label>
+                    <br>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label for="" class="labels">Email: </label>
+                    <br>
+                    <input type="email" class="inputs">
+                    <br>
+                    <label for="" class="labels">Senha: </label>
+                    <br>
+                    <input type="password" class="inputs">
+                    <br>
+                    <label for="" class="labels"></label>
+                    <br>
+                    <button onmouseover="entrarSombra('submit')" type="submit" id="submit" name="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

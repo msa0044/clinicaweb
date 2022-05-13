@@ -15,15 +15,9 @@ public class exec implements CommandLineRunner {
 
     @Override
 	public void run(String... args) throws Exception {
-	Paciente p = new Paciente();
-    p.setNome("Marcos");
-    Paciente p1 = new Paciente();
-    p1.setNome("Mateus");
-    Paciente p2 = new Paciente();
-    p2.setNome("Bruno");
-
-    pr.save(p);
-    pr.save(p1);
-    pr.save(p2);
+     Paciente p = new Paciente(1L, "Marcos", "CPF", 18, "rua", 215, "bairro",
+      "cidade", "estado", "telefone", "email", "senha");
+      pr.save(p);
+      System.out.println(pr.findAll());
     }
 }
