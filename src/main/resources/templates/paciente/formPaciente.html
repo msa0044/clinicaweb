@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica</title>
+    <script src="formPaciente.js"></script>
+    <link rel="stylesheet" href="https://github.com/msa0044/clinicaweb/blob/main/src/main/resources/templates/paciente/formPaciente.css">
+</head>
+
+<body>
+    <div id="header">
+        <div id="menu">
+            <div id="menuPaciente" onmouseenter="mostrarMenu('menuPaciente')" onmouseleave="mostrarMenu('menuPaciente')"
+                class="itemmenu">
+                PACIENTE
+
+                <ul class="submenu">
+                    <li><a href="">Encontrar</a></li>
+                    <li><a href="">Listar todos</a></li>
+                    <li><a href="../paciente/formPaciente.html">Cadastrar novo</a></li>
+                    <li><a href="">Apagar um</a></li>
+                </ul>
+            </div>
+            <div id="menuMedico" onmouseenter="mostrarMenu('menuMedico')" onmouseleave="mostrarMenu('menuMedico')"
+                class="itemmenu">
+                MÉDICO
+
+                <ul class="submenu">
+                    <li><a href="">Encontrar</a></li>
+                    <li><a href="">Listar todos</a></li>
+                    <li><a href="../medico/formMedico.html">Cadastrar novo</a></li>
+                    <li><a href="">Apagar um</a></li>
+                </ul>
+            </div>
+            <div id="menuConsulta" onmouseenter="mostrarMenu('menuConsulta')" onmouseleave="mostrarMenu('menuConsulta')"
+                class="itemmenu">
+                CONSULTA
+
+                <ul class="submenu">
+                    <li><a href="">Encontrar</a></li>
+                    <li><a href="">Listar todos</a></li>
+                    <li><a href="../consulta/formConsulta.html">Cadastrar novo </a></li>
+                    <li><a href="">Apagar um</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="conteudo">
+        <div id="center">
+            <div id="meio">
+                <h2 id="titulo">CADASTRAR PACIENTE</h2>
+
+                <form id="form" onsubmit="post()">
+                    <label for="" class="labels">Nome: </label>
+                    <br>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label for="" class="labels">CPF: </label>
+                    <br>
+                    <input type="number" class="inputs">
+                    <br>
+                    <label for="" class="labels">Idade: </label>
+                    <br>
+                    <input type="number" class="inputs">
+                    <br>
+                    <label for="" class="labels">Rua: </label>
+                    <br>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label for="" class="labels">Número: </label>
+                    <br>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label for="" class="labels">Bairro: </label>
+                    <br>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label for="" class="labels">Cidade: </label>
+                    <br>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label for="" class="labels">Estado: </label>
+                    <br>
+                    <input type="text" class="inputs">
+                    <br>
+                    <label for="" class="labels">Telefone: </label>
+                    <br>
+                    <input type="tel" class="inputs">
+                    <br>
+                    <label for="" class="labels">Email: </label>
+                    <br>
+                    <input type="email" class="inputs">
+                    <br>
+                    <label for="" class="labels">Senha: </label>
+                    <br>
+                    <input type="password" class="inputs">
+                    <br>
+                    <label for="" class="labels"></label>
+                    <br>
+                    <button onmouseover="entrarSombra('submit')" type="submit" id="submit"
+                        name="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

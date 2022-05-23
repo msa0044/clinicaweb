@@ -1,0 +1,117 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: rgb(227, 255, 250);
+}
+
+
+#header{
+    background-color: aquamarine;
+    width: 100%;
+    height: 50px;
+}
+
+#menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#conteudo {
+    padding: 20px;
+}
+
+#center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#meio{
+    background-color: aquamarine;
+    width: 40%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#titulo{
+    text-align: center;
+}
+
+.labels {
+    display: inline-block;
+}
+
+.inputs{
+    background-color: rgb(227, 255, 250);
+    border: 0px;
+    text-decoration: dotted;
+    padding: 0px;
+    margin: 0px;
+    height: 30px;
+
+}
+
+.inputs, .labels, #submit{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+
+#submit{
+    background-color: rgb(227, 255, 250);
+    margin: 0px;
+    border: 0px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+#submit:hover{
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.400);
+}
+
+.itemmenu{
+    height: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.itemmenu a{
+    text-decoration: none;
+    color: black;
+}
+
+.itemmenu a:hover{
+    color: rgb(19, 19, 19);
+    text-decoration: underline;
+}
+
+.submenu {
+    display: none;
+    position:absolute;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.400);
+    padding: 15px;
+    top: 20px;
+}
+
+.submenu.open {
+    display: block
+}
+
+.submenu{
+    padding: 10px;
+}
+
+.submenu li {
+    padding: 10px;
+}

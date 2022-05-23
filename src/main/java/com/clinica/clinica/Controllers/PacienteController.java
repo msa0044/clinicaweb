@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
@@ -23,6 +24,13 @@ public class PacienteController {
 
     @Autowired
     private PacienteService service;
+
+    @GetMapping(value = "/cadastrar")
+    public ModelAndView cadastro(){
+        ModelAndView model = new ModelAndView("paciente/formPaciente.html");
+        model.addObject("olamundo", "Olá mundo");
+        return model;
+    }
 
     @GetMapping(value = "/get/{id}")
     public ResponseEntity<Paciente> getOne(@PathVariable Long id) {

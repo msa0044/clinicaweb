@@ -108,7 +108,10 @@ body{
     display: block
 }
 
-.submenu ul {
+.submenu{
     padding: 10px;
-    
+}
+
+.submenu li {
+    padding: 10px;
 }
