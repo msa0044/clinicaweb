@@ -1,4 +1,4 @@
-function mostrarMenuPaciente(a){
+function mostrarMenu(a){
     let tag = document.getElementById(a);
     let submenu = tag.getElementsByClassName("submenu")
     if(submenu[0].classList.contains('open')) {

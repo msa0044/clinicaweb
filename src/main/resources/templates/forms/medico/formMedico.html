@@ -13,21 +13,35 @@
 <body>
     <div id="header">
         <div id="menu">
-            <div id="menuPaciente" onclick="mostrarMenuPaciente('menuPaciente')" class="itemmenu" class="sombra">
+            <div id="menuPaciente" onmouseenter="mostrarMenu('menuPaciente')" onmouseleave="mostrarMenu('menuPaciente')" class="itemmenu">
                 PACIENTE
 
-                <div class="submenu">
-                    <ul>
-                        <li>item 1</li>
-                        <li>item 2</li>
-                    </ul>
-                </div>
+                <ul class="submenu">
+                    <li><a href="">Pesquisar um</a></li>
+                    <li><a href="">Listar</a></li>
+                    <li><a href="">Cadastrar</a></li>
+                    <li><a href="">Apagar</a></li>
+                </ul>
             </div>
-            <div id="menuMedico" onclick="mostrarMenuMedico('menuMedico')"  class="itemmenu">
+            <div id="menuMedico" onmouseenter="mostrarMenu('menuMedico')" onmouseleave="mostrarMenu('menuMedico')" class="itemmenu">
                 MÉDICO
+
+                <ul  class="submenu">
+                    <li><a href="">Pesquisar um</a></li>
+                    <li><a href="">Listar</a></li>
+                    <li><a href="">Cadastrar</a></li>
+                    <li><a href="">Apagar</a></li>
+                </ul>
             </div>
-            <div id="menuConsulta" onclick="mostrarMenuConsulta('menuConsulta')"  class="itemmenu">
+            <div id="menuConsulta" onmouseenter="mostrarMenu('menuConsulta')" onmouseleave="mostrarMenu('menuConsulta')" class="itemmenu">
                 CONSULTA
+
+                <ul class="submenu">
+                    <li><a href="">Pesquisar um</a></li>
+                    <li><a href="">Listar</a></li>
+                    <li><a href="">Cadastrar</a></li>
+                    <li><a href="">Apagar</a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -58,7 +72,8 @@
                     <br>
                     <label for="" class="labels"></label>
                     <br>
-                    <button onmouseover="entrarSombra('submit')" type="submit" id="submit" name="submit">Cadastrar</button>
+                    <button onmouseover="entrarSombra('submit')" type="submit" id="submit"
+                        name="submit">Cadastrar</button>
                 </form>
             </div>
         </div>

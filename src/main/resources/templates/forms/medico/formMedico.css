@@ -19,21 +19,6 @@ body{
     justify-content: space-evenly;
 }
 
-.itemmenu{
-    cursor: pointer;
-    user-select: none;
-}
-
-
-
-.itemmenu:hover{
-    color: rgb(94, 94, 94);
-}
-
-.sombra{
-    box-shadow: 3px 3px red;
-}
-
 #conteudo {
     padding: 20px;
 }
@@ -90,15 +75,33 @@ body{
 }
 
 #submit:hover{
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.300);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.400);
+}
+
+.itemmenu{
+    height: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.itemmenu a{
+    text-decoration: none;
+    color: black;
+}
+
+.itemmenu a:hover{
+    color: rgb(19, 19, 19);
+    text-decoration: underline;
 }
 
 .submenu {
     display: none;
     position:absolute;
+    list-style: none;
     background-color: #fff;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.400);
     padding: 15px;
-    top: 40px;
+    top: 20px;
 }
 
 .submenu.open {
@@ -107,4 +110,5 @@ body{
 
 .submenu ul {
     padding: 10px;
+    
 }
