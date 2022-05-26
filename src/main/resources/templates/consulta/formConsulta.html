@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica</title>
-    <script src="formConsulta.js"></script>
-    <link rel="stylesheet" href="formConsulta.css">
+    <script src="/src/main/resources/static/js/consulta/formConsulta.js" th:src="@{/js/consulta/formConsulta.js}"></script>
+    <link href="/src/main/resources/static/css/consulta/formConsulta.css" th:src="@"formPaciente.css" th:href = "@{/css/consulta/formConsulta.css}" rel="stylesheet">
 </head>
 
 <body>
     <div id="header">
         <div id="menu">
-            <div id="menuPaciente" onmouseenter="mostrarMenu('menuPaciente')" onmouseleave="mostrarMenu('menuPaciente')" class="itemmenu">
+            <div id="menuPaciente" onmouseenter="mostrarMenu('menuPaciente')" onmouseleave="mostrarMenu('menuPaciente')"
+                class="itemmenu">
                 PACIENTE
 
                 <ul class="submenu">
                     <li><a href="">Encontrar</a></li>
                     <li><a href="">Listar todos</a></li>
-                    <li><a href="../paciente/formPaciente.html">Cadastrar novo</a></li>
+                    <li><a href="http://localhost:8080/paciente/cadastrar">Cadastrar novo</a></li>
                     <li><a href="">Apagar um</a></li>
                 </ul>
             </div>
@@ -30,7 +31,7 @@
                 <ul class="submenu">
                     <li><a href="">Encontrar</a></li>
                     <li><a href="">Listar todos</a></li>
-                    <li><a href="../medico/formMedico.html">Cadastrar novo</a></li>
+                    <li><a href="http://localhost:8080/medico/cadastrar">Cadastrar novo</a></li>
                     <li><a href="">Apagar um</a></li>
                 </ul>
             </div>
@@ -41,7 +42,7 @@
                 <ul class="submenu">
                     <li><a href="">Encontrar</a></li>
                     <li><a href="">Listar todos</a></li>
-                    <li><a href="../consulta/formConsulta.html">Cadastrar novo </a></li>
+                    <li><a href="http://localhost:8080/consulta/cadastrar">Cadastrar novo </a></li>
                     <li><a href="">Apagar um</a></li>
                 </ul>
             </div>

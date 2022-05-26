@@ -15,11 +15,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @RequestMapping(value = "/medico")
 public class MedicoController {
+
+    
+    @GetMapping(value = "/cadastrar")
+    public ModelAndView cadastro(){
+        ModelAndView model = new ModelAndView("medico/formMedico.html");
+        return model;
+    }
 
     @Autowired
     private MedicoService service;

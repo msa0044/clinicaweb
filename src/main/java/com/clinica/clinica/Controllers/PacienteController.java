@@ -28,7 +28,6 @@ public class PacienteController {
     @GetMapping(value = "/cadastrar")
     public ModelAndView cadastro(){
         ModelAndView model = new ModelAndView("paciente/formPaciente.html");
-        model.addObject("olamundo", "Olá mundo");
         return model;
     }
 

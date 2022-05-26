@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
@@ -23,6 +24,12 @@ public class ConsultaController {
 
     @Autowired
     private ConsultaService service;
+
+    @GetMapping(value = "/cadastrar")
+    public ModelAndView cadastro(){
+        ModelAndView model = new ModelAndView("consulta/formConsulta.html");
+        return model;
+    }
 
     @GetMapping(value = "/get/{id}")
     public ResponseEntity<Consulta> getOne(@PathVariable Long id) {
