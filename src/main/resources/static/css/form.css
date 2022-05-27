@@ -1,0 +1,242 @@
+body {
+    --cor-clara: rgb(239, 255, 250);
+    --cor-branca: rgb(255, 255, 255);
+    --cor-escura: rgb(0, 138, 92);
+    --cor-escura-transparente: rgba(0, 138, 92, 0.26);
+    --cor-amarela: rgb(211, 158, 12);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: var(--cor-branca);
+    color: var(--cor-escura);
+    font-size: 20px;
+}
+
+::-webkit-scrollbar {
+    width:5px;
+    height: 10px;
+    }
+     
+    /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+    ::-webkit-scrollbar-track {
+    background:var(--cor-escura);
+    }
+     
+    /* aqui é a alça da barra, que demonstra a altura que você está na página
+    estou colocando uma cor azul clara nela*/
+    ::-webkit-scrollbar-thumb {
+    background: var(--cor-amarela);
+    }
+
+@font-face {
+    font-family: 'Time Sans Serif';
+    src: url('../font/font.ttf');
+}
+
+* {
+    font-family: 'Time Sans Serif';
+}
+
+*::selection{
+    background-color:var(--cor-amarela);
+    color:var(var(--cor-escura));
+}
+
+#linha {
+    height:3px;
+    width: 100%;
+    background-color: var(--cor-amarela);
+}
+
+#capa {
+    width: 100%;
+}
+
+#capa img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    user-select: none;
+    user-zoom: none;
+}
+
+#header {
+    background-color: var(--cor-escura);
+    color: var(--cor-branca);
+    width: 100%;
+    height: 60px;
+}
+
+#menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#conteudo {
+    padding: 20px;
+}
+
+#meio {
+    padding: 30px;
+}
+
+#form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1px solid var(--cor-escura);
+    border-radius: 20px;
+}
+
+#colunas{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#meioleft {
+    width: 40%;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#meiorigth {
+    width: 40%;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#divfrase{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#frase {
+    user-select: none;
+    padding: 40px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid var(--cor-branca);
+    text-decoration: underline;
+    color: var(--cor-escura);
+    transition-property: border color;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-timing-function: cubic-bezier(5, 0, 5, 1);
+}
+
+#frase:hover{
+    /* border: 1px solid var(--cor-escura); */
+    color: var(--cor-amarela);
+}
+
+#centralizatitulo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 40px;
+    width: 40%;
+    border-bottom: 1px solid var(--cor-branca);
+    transition-property: border-bottom;
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+}
+
+#titulo:hover {
+    border-bottom: 1px solid var(--cor-amarela);
+}
+
+
+.labels {
+    display: inline-block;
+}
+
+.inputs {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    height: 30px;
+    border: 1px solid var(--cor-escura);
+    text-align: center;
+}
+
+#form select {
+    height: 32px;
+}
+
+.inputs:hover{
+    background-color: var(--cor-clara);
+}
+
+.inputs, .labels, #submit {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+#submit {
+    background-color: var(--cor-branca);
+    color: var(--cor-escura);
+    margin: 0px;
+    border: 0px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid;
+
+    transition-property: background-color color;
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+}
+
+#submit:hover {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+}
+
+.itemmenu {
+    cursor: pointer;
+    user-select: none;
+}
+
+.itemmenu:hover {
+    color: var(--cor-amarela);
+}
+
+.itemmenu a {
+    text-decoration: none;
+    color: var(--cor-escura);
+}
+
+.itemmenu a:hover {
+    color: var(--cor-amarela);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: var(--cor-branca);
+    box-shadow: 0px 0px 10px var(--cor-escura-transparente);
+    padding: 15px;
+    border-radius: 15px;
+    top: 35px;
+}
+
+.itemmenu:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 15px;
+}

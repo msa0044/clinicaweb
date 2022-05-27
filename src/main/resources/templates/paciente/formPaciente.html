@@ -6,16 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica</title>
-    <script src="/src/main/resources/static/js/paciente/formPaciente.js" th:src="@{/js/paciente/formPaciente.js}"></script>
-    <link href="/src/main/resources/static/css/paciente/formPaciente.css" th:href = "@{/css/paciente/formPaciente.css}" rel="stylesheet">
+    <script src="/src/main/resources/static/js/form.js"
+        th:src="@{/js/form.js}"></script>
+    <link href="/src/main/resources/static/css/form.css" th:href="@{/css/form.css}"
+        rel="stylesheet">
 </head>
 
 <body>
     <div id="header">
+        <div id="linha">
+
+        </div>
         <div id="menu">
-            <div id="menuPaciente" onmouseenter="mostrarMenu('menuPaciente')" onmouseleave="mostrarMenu('menuPaciente')"
-                class="itemmenu">
-                PACIENTE
+            <div id="menuPaciente" class="itemmenu">
+                <p>PACIENTE</p>
 
                 <ul class="submenu">
                     <li><a href="">Encontrar</a></li>
@@ -24,9 +28,8 @@
                     <li><a href="">Apagar um</a></li>
                 </ul>
             </div>
-            <div id="menuMedico" onmouseenter="mostrarMenu('menuMedico')" onmouseleave="mostrarMenu('menuMedico')"
-                class="itemmenu">
-                MÉDICO
+            <div id="menuMedico" class="itemmenu">
+                <p>MÉDICO</p>
 
                 <ul class="submenu">
                     <li><a href="">Encontrar</a></li>
@@ -35,9 +38,8 @@
                     <li><a href="">Apagar um</a></li>
                 </ul>
             </div>
-            <div id="menuConsulta" onmouseenter="mostrarMenu('menuConsulta')" onmouseleave="mostrarMenu('menuConsulta')"
-                class="itemmenu">
-                CONSULTA
+            <div id="menuConsulta" class="itemmenu">
+                <p>CONSULTA</p>
 
                 <ul class="submenu">
                     <li><a href="">Encontrar</a></li>
@@ -48,62 +50,76 @@
             </div>
         </div>
     </div>
+    <div id="capa">
+<img src="../../static/imgs/capa.jpg" th:src="@{/imgs/capa.jpg}" alt="">    
+</div>
     <div id="conteudo">
-        <div id="center">
-            <div id="meio">
-                <h2 id="titulo">CADASTRAR PACIENTE</h2>
+        <div id="divfrase">
+            <p id="frase"><i>"Passo a passo você se sentirá <br> mais confortável e perceberá que esta <br> também é
+                    sua
+                    casa"</i></p>
+        </div>
+        <div id="meio">
+            <form id="form" onsubmit="post()">
+                <div id="centralizatitulo">
+                    <p id="titulo">Cadastrar um novo paciente</p>
+                </div>
+                <div id="colunas">
+                    <div id="meioleft">
+                        <label for="" class="labels">Nome: </label>
+                        <br>
+                        <input type="text" class="inputs">
+                        <br>
+                        <label for="" class="labels">CPF: </label>
+                        <br>
+                        <input type="number" class="inputs">
+                        <br>
+                        <label for="" class="labels">Idade: </label>
+                        <br>
+                        <input type="number" class="inputs">
+                        <br>
+                        <label for="" class="labels">Telefone: </label>
+                        <br>
+                        <input type="tel" class="inputs">
+                        <br>
+                        <label for="" class="labels">Email: </label>
+                        <br>
+                        <input type="email" class="inputs">
+                        <br>
+                        <label for="" class="labels">Senha: </label>
+                        <br>
+                        <input type="password" class="inputs">
+                        <br>
+                    </div>
+                    <div id="meiorigth">
+                        <label for="" class="labels">Rua: </label>
+                        <br>
+                        <input type="text" class="inputs">
+                        <br>
+                        <label for="" class="labels">Número: </label>
+                        <br>
+                        <input type="text" class="inputs">
+                        <br>
+                        <label for="" class="labels">Bairro: </label>
+                        <br>
+                        <input type="text" class="inputs">
+                        <br>
+                        <label for="" class="labels">Cidade: </label>
+                        <br>
+                        <input type="text" class="inputs">
+                        <br>
+                        <label for="" class="labels">Estado: </label>
+                        <br>
+                        <input type="text" class="inputs">
+                        <br>
+                        <label for="" class="labels"></label>
+                        <br>
+                        <button onmouseover="entrarSombra('submit')" type="submit" id="submit"
+                            name="submit">Cadastrar</button>
+                    </div>
+                </div>
+            </form>
 
-                <form id="form" onsubmit="post()">
-                    <label for="" class="labels">Nome: </label>
-                    <br>
-                    <input type="text" class="inputs">
-                    <br>
-                    <label for="" class="labels">CPF: </label>
-                    <br>
-                    <input type="number" class="inputs">
-                    <br>
-                    <label for="" class="labels">Idade: </label>
-                    <br>
-                    <input type="number" class="inputs">
-                    <br>
-                    <label for="" class="labels">Rua: </label>
-                    <br>
-                    <input type="text" class="inputs">
-                    <br>
-                    <label for="" class="labels">Número: </label>
-                    <br>
-                    <input type="text" class="inputs">
-                    <br>
-                    <label for="" class="labels">Bairro: </label>
-                    <br>
-                    <input type="text" class="inputs">
-                    <br>
-                    <label for="" class="labels">Cidade: </label>
-                    <br>
-                    <input type="text" class="inputs">
-                    <br>
-                    <label for="" class="labels">Estado: </label>
-                    <br>
-                    <input type="text" class="inputs">
-                    <br>
-                    <label for="" class="labels">Telefone: </label>
-                    <br>
-                    <input type="tel" class="inputs">
-                    <br>
-                    <label for="" class="labels">Email: </label>
-                    <br>
-                    <input type="email" class="inputs">
-                    <br>
-                    <label for="" class="labels">Senha: </label>
-                    <br>
-                    <input type="password" class="inputs">
-                    <br>
-                    <label for="" class="labels"></label>
-                    <br>
-                    <button onmouseover="entrarSombra('submit')" type="submit" id="submit"
-                        name="submit">Cadastrar</button>
-                </form>
-            </div>
         </div>
     </div>
 </body>
