@@ -31,6 +31,24 @@ public class PacienteController {
         return model;
     }
 
+    @GetMapping(value = "/encontrar")
+    public ModelAndView encontrar(){
+        ModelAndView model = new ModelAndView("paciente/encontrar.html");
+        return model;
+    }
+
+    @GetMapping(value = "/listar")
+    public ModelAndView listar(){
+        ModelAndView model = new ModelAndView("paciente/listar.html");
+        return model;
+    }
+
+    @GetMapping(value = "/apagar")
+    public ModelAndView apagar(){
+        ModelAndView model = new ModelAndView("paciente/apagar.html");
+        return model;
+    }
+
     @GetMapping(value = "/get/{id}")
     public ResponseEntity<Paciente> getOne(@PathVariable Long id) {
         return ResponseEntity.ok().body(service.getOne(id));

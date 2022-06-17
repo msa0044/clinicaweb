@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica</title>
-    <script src="/src/main/resources/static/js/form.js" th:src="@{/js/form.js}"></script>
-    <link href="/src/main/resources/static/css/form.css" th:href="@{/css/form.css}" rel="stylesheet">
+    <script src="/src/main/resources/static/js/listar.js" th:src="@{/js/listar.js}"></script>
+    <link href="/src/main/resources/static/css/listar.css" th:href="@{/css/listar.css}" rel="stylesheet">
 </head>
 
-<body>
+<body onload="listarPaciente()">
     <div id="header">
         <div id="linha">
 
@@ -60,39 +60,33 @@
         <div id="meio">
             <form id="form" onsubmit="post()">
                 <div id="centralizatitulo">
-                    <p id="titulo">Cadastrar um novo médico</p>
+                    <p id="titulo">Pacientes</p>
                 </div>
                 <div id="colunas">
-                    <div id="meioleft">
-                        <label for="" class="labels">Nome: </label>
+                    <div id="divincolumn">
                         <br>
-                        <input type="text" class="inputs">
-                        <br>
-                        <label for="" class="labels">Telefone: </label>
-                        <br>
-                        <input type="tel" class="inputs">
-                        <br>
-                        <label for="" class="labels">CPF: </label>
-                        <br>
-                        <input type="text" class="inputs">
-                        <br>
-                    </div>
-                    <div id="meiorigth">
-                        <label for="" class="labels">Email: </label>
-                        <br>
-                        <input type="email" class="inputs">
-                        <br>
-                        <label for="" class="labels">Senha: </label>
-                        <br>
-                        <input type="password" class="inputs">
-                        <br>
-                        <label for="" class="labels"></label>
-                        <br>
-                        <button onmouseover="entrarSombra('submit')" type="submit" id="submit"
-                            name="submit">Cadastrar</button>
+                        <div id="divjson">
+                            <table id="txtjson" >
+                                <th>id</th>
+                                <th>nome</th>
+                                <th>cpf</th>
+                                <th>idade</th>
+                                <th>rua</th>
+                                <th>numero</th>
+                                <th>bairro</th>
+                                <th>cidade</th>
+                                <th>estado</th>
+                                <th>telefone</th>
+                                <th>email</th>
+                                <th>senha</th>
+                            </table>    
+                        </div>
                     </div>
                 </div>
             </form>
+
         </div>
     </div>
 </body>
+
+</html>

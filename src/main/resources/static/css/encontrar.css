@@ -12,20 +12,20 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width:5px;
+    width: 5px;
     height: 10px;
-    }
-     
-    /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
-    ::-webkit-scrollbar-track {
-    background:var(--cor-escura);
-    }
-     
-    /* aqui é a alça da barra, que demonstra a altura que você está na página
+}
+
+/* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+::-webkit-scrollbar-track {
+    background: var(--cor-escura);
+}
+
+/* aqui é a alça da barra, que demonstra a altura que você está na página
     estou colocando uma cor azul clara nela*/
-    ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: var(--cor-amarela);
-    }
+}
 
 @font-face {
     font-family: 'Time Sans Serif';
@@ -36,13 +36,13 @@ body {
     font-family: 'Time Sans Serif';
 }
 
-*::selection{
-    background-color:var(--cor-amarela);
-    color:var(var(--cor-escura));
+*::selection {
+    background-color: var(--cor-amarela);
+    color: var(var(--cor-escura));
 }
 
 #linha {
-    height:3px;
+    height: 3px;
     width: 100%;
     background-color: var(--cor-amarela);
 }
@@ -88,7 +88,7 @@ body {
     border-radius: 20px;
 }
 
-#colunas{
+#colunas {
     display: flex;
     justify-content: space-evenly;
 }
@@ -105,7 +105,7 @@ body {
     border-radius: 20px;
 }
 
-#divfrase{
+#divfrase {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -126,12 +126,12 @@ body {
     transition-timing-function: cubic-bezier(5, 0, 5, 1);
 }
 
-#frase:hover{
+#frase:hover {
     /* border: 1px solid var(--cor-escura); */
     color: var(--cor-amarela);
 }
 
-#centralizatitulo{
+#centralizatitulo {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -157,7 +157,6 @@ body {
 }
 
 .inputs {
-    color: var(--cor-amarela);
     border: 0px;
     padding: 0px;
     margin: 0px;
@@ -170,7 +169,31 @@ body {
     height: 32px;
 }
 
-.inputs:hover{
+#divincolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+#selectEntity, #divjson {
+    width: 80%;
+    border: 1px solid var(--cor-escura);
+    border-radius: 5px;
+}
+
+#divjson {
+    height: 100px;
+}
+
+#txtjson {
+    color: var(--cor-amarela);
+    text-align: center;
+}
+
+.inputs:hover {
     background-color: var(--cor-clara);
 }
 
