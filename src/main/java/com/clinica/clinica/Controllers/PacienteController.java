@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.clinica.clinica.Services.PacienteService;
 import com.clinica.clinica.entities.Paciente;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,25 +27,25 @@ public class PacienteController {
     private PacienteService service;
 
     @GetMapping(value = "/cadastrar")
-    public ModelAndView cadastro(){
+    public ModelAndView cadastro() {
         ModelAndView model = new ModelAndView("paciente/formPaciente.html");
         return model;
     }
 
     @GetMapping(value = "/encontrar")
-    public ModelAndView encontrar(){
+    public ModelAndView encontrar() {
         ModelAndView model = new ModelAndView("paciente/encontrar.html");
         return model;
     }
 
     @GetMapping(value = "/listar")
-    public ModelAndView listar(){
+    public ModelAndView listar() {
         ModelAndView model = new ModelAndView("paciente/listar.html");
         return model;
     }
 
     @GetMapping(value = "/apagar")
-    public ModelAndView apagar(){
+    public ModelAndView apagar() {
         ModelAndView model = new ModelAndView("paciente/apagar.html");
         return model;
     }
@@ -59,13 +60,11 @@ public class PacienteController {
         return ResponseEntity.ok().body(service.getAll());
     }
 
-    @PostMapping()
-    public ResponseEntity<Void> saveOne(@RequestBody Paciente entity) {
-            service.save(entity);
-            URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(entity.getId())
-                    .toUri();
-            return ResponseEntity.created(uri).build();
-    }
+    @PostMapping(consumes = { "application/json" })
+    public ResponseEntity<Paciente> saveOne(@RequestBody Paciente entity) {
+        Paciente p = service.save(entity);
+        return ResponseEntity.ok().body(p);
+    };
 
     @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {

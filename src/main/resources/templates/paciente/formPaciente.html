@@ -60,7 +60,7 @@
                     casa"</i></p>
         </div>
         <div id="meio">
-            <form id="form" onsubmit="post()">
+            <form id="form">
                 <div id="centralizatitulo">
                     <p id="titulo">Cadastrar um novo paciente</p>
                 </div>
@@ -68,54 +68,54 @@
                     <div id="meioleft">
                         <label for="" class="labels">Nome: </label>
                         <br>
-                        <input type="text" class="inputs">
+                        <input type="text" class="inputs" id="nome">
                         <br>
                         <label for="" class="labels">CPF: </label>
                         <br>
-                        <input type="number" class="inputs">
+                        <input type="number" class="inputs" id="cpf">
                         <br>
                         <label for="" class="labels">Idade: </label>
                         <br>
-                        <input type="number" class="inputs">
+                        <input type="number" class="inputs" id="idade">
                         <br>
                         <label for="" class="labels">Telefone: </label>
                         <br>
-                        <input type="tel" class="inputs">
+                        <input type="tel" class="inputs" id="telefone">
                         <br>
                         <label for="" class="labels">Email: </label>
                         <br>
-                        <input type="email" class="inputs">
+                        <input type="email" class="inputs" id="email">
                         <br>
                         <label for="" class="labels">Senha: </label>
                         <br>
-                        <input type="password" class="inputs">
+                        <input type="password" class="inputs" id="senha">
                         <br>
                     </div>
                     <div id="meiorigth">
                         <label for="" class="labels">Rua: </label>
                         <br>
-                        <input type="text" class="inputs">
+                        <input type="text" class="inputs" id="rua">
                         <br>
                         <label for="" class="labels">Número: </label>
                         <br>
-                        <input type="text" class="inputs">
+                        <input type="text" class="inputs" id="numero">
                         <br>
                         <label for="" class="labels">Bairro: </label>
                         <br>
-                        <input type="text" class="inputs">
+                        <input type="text" class="inputs" id="bairro">
                         <br>
                         <label for="" class="labels">Cidade: </label>
                         <br>
-                        <input type="text" class="inputs">
+                        <input type="text" class="inputs" id="cidade">
                         <br>
                         <label for="" class="labels">Estado: </label>
                         <br>
-                        <input type="text" class="inputs">
+                        <input type="text" class="inputs" id="estado">
                         <br>
                         <label for="" class="labels"></label>
                         <br>
-                        <button onmouseover="entrarSombra('submit')" type="submit" id="submit"
-                            name="submit">Cadastrar</button>
+                        <button type="button" id="submit"
+                            name="submit" onclick="criarObjeto()">Cadastrar</button>
                     </div>
                 </div>
             </form>

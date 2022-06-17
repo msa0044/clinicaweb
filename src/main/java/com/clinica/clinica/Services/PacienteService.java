@@ -24,8 +24,8 @@ public class PacienteService {
         return repository.findAll();
     }
 
-    public void save(Paciente entity){
-        repository.save(entity);
+    public Paciente save(Paciente entity){
+        return repository.save(entity);
     }
 
     public void delete(Long id){

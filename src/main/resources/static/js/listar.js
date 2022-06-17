@@ -58,7 +58,7 @@ function listarPaciente() {
         lista.appendChild(tr)
 
         tr.querySelectorAll('td').forEach(element => {
-            element.style.border = '1px solid'
+            element.style.backgroundColor = 'rgb(0, 138, 92, 0.100)'
             element.style.borderRadius = '5px'
             element.style.color = 'rgb(0, 138, 92)'
         });
